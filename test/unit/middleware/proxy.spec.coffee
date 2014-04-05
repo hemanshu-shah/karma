@@ -150,7 +150,8 @@ describe 'middleware.proxy', ->
     proxy = {'/base': '/proxy/test'}
     parsedProxyConfig = m.parseProxyConfig proxy
     expect(parsedProxyConfig).to.deep.equal {
-      '/base': {host: c.DEFAULT_HOSTNAME, port: c.DEFAULT_PORT, baseProxyUrl: '/proxy/test', https:false}
+      '/base': {host: c.DEFAULT_HOSTNAME, port: c.DEFAULT_PORT,
+      baseProxyUrl: '/proxy/test', https:false}
     }
 
   it 'should handle empty proxy config', ->
